@@ -1,11 +1,78 @@
+
+<!--signals the web page to use HTML5 Standards-->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<!--tells web page language is in english-->
+
+<head>
+    <meta charset="UTF-8">
+    <!--allows for different characters to be used-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShiftTrack</title>
+
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <!--links the css styling-->
+
+</head>
+
+<body>
+    <div class="Nav-Bar">
+        <header>
+            <!--Displaying ShiftTrack text-->
+            <h2>ShiftTrack</h2>
+        </header>
+
+        <nav>
+            <a href="/">Home</a>
+            <!--Link to redirect to homepage-->
+
+            <a href="/shifts">Shift History</a>
+            <!--Link to view previous shifts-->
+
+            <a href="/add-shift">Add Shift</a>
+            <!--Link to add a new shift-->
+
+        </nav>
+
+        <div class="clear"></div>
+        <!--resets float-->
+    </div>
+
+    <main>
+        <section>
+            <h1>Welcome to ShiftTrack</h1>
+
+            <h2>Track your shifts, hours, and earnings.</h2>
+
+            <p>
+                ShiftTrack is a website designed to help users
+                keep track of their work shifts, hours worked,
+                and estimated earnings.
+            </p>
+
+            <p>
+                Users can add their shifts, view their shift history,
+                and calculate how much they have earned based on
+                their hourly wage.
+            </p>
+            <!--adding text explaining the website-->
+
+            <a href="/add-shift">Add Your First Shift</a>
+            <!--Link to add shift page-->
+
+        </section>
+
+        <div class="clear"></div>
+        <!--clearing float-->
+
+    </main>
+
+    <footer>
+        <p>&copy;2026 ShiftTrack. All rights reserved.</p>
+        <!--adding copyright-->
+    </footer>
+
+</body>
 </html>

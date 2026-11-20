@@ -1,8 +1,98 @@
+
+/* Styles the background and text */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #f4f9ff;
+    color: #293241;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-  color: #00B7FF;
+/* changes spacing around nav bar and background colour */
+.Nav-Bar {
+    background-color: #4a90e2;
+    padding: 15px 20px;
+}
+
+/* moves ShiftTrack text to the left */
+.Nav-Bar header {
+    float: left;
+    color: white;
+}
+
+/* moves navigation links to the right */
+.Nav-Bar nav {
+    float: right;
+    margin-top: 25px;
+}
+
+/* changes the nav bar link colours and spacing */
+.Nav-Bar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* resets the float */
+.clear {
+    clear: both;
+}
+
+/* adds spacing around the main content */
+main {
+    padding: 60px 40px;
+    text-align: left;
+}
+
+/* changes the heading colour */
+main h1 {
+    color: #4a90e2;
+    font-size: 32px;
+}
+
+/* changes the second heading */
+main h2 {
+    color: #293241;
+    font-size: 22px;
+}
+
+/* changes paragraph spacing */
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* styles the main page link */
+main a {
+    background-color: #68c9a3;
+    color: #293241;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+
+/* styles the footer and keeps it at the bottom */
+footer {
+    background-color: #e3f0ff;
+    text-align: center;
+    padding: 20px;
+    color: #293241;
+    border-top: 1px solid #c5ddf5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Styles the background and text */
+body {
+    background-color: #f4f9ff;
+    color: #293241;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
