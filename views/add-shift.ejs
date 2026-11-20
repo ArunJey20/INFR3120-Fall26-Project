@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <!-- displays the add shift page heading -->
+    <h1>Add Shift</h1>
+
+    <!-- form for entering work shift information -->
+    <form action="/add-shift" method="POST">
+
+        <!-- enter the date of the shift -->
+        <label for="shiftDate">Shift Date:</label>
+        <input type="date" id="shiftDate" name="shiftDate" required>
+
+        <br><br>
+
+        <!-- enter the starting time -->
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" name="startTime" required>
+
+        <br><br>
+
+        <!-- enter the ending time -->
+        <label for="endTime">End Time:</label>
+        <input type="time" id="endTime" name="endTime" required>
+
+        <br><br>
+
+        <!-- enter the hourly wage -->
+        <label for="hourlyWage">Hourly Wage ($):</label>
+        <input type="number" id="hourlyWage" name="hourlyWage" min="0" step="0.01" required>
+
+        <br><br>
+
+        <!-- submits the shift information -->
+        <button type="submit">Add Shift</button>
+
+    </form>
+
+</body>
+</html>
