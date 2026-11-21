@@ -20,6 +20,7 @@ body {
     color: white;
 }
 
+
 /* moves navigation links to the right */
 .Nav-Bar nav {
     float: right;
@@ -95,4 +96,17 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+}
+/* makes the logo bigger and moves it beside the website name */
+.logo {
+    width: 75px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+}
+
+/* aligns the website name beside the logo */
+.Nav-Bar header h2 {
+    float: left;
+    margin-top: 22px;
 }
