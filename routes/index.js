@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
+var mongoose = require('mongoose');
+
+// Gets the Shift model to save work shifts
+var Shift = mongoose.model('Shift');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -21,11 +26,24 @@ router.post('/add-shift', function(req, res, next) {
   var endTime = req.body.endTime;
   var hourlyWage = req.body.hourlyWage;
 
-  // displays the submitted information in the terminal
-  console.log(shiftDate, startTime, endTime, hourlyWage);
+  // Creates a new shift using the information from the form
+var newShift = new Shift({
+    shiftDate: shiftDate,
+    startTime: startTime,
+    endTime: endTime,
+    hourlyWage: hourlyWage
+});
 
-  // returns to the add shift page
-  res.redirect('/add-shift');
+// Saves the shift to MongoDB
+newShift.save()
+    .then(function() {
+        console.log('Shift saved successfully');
+        res.redirect('/add-shift');
+    })
+    .catch(function(err) {
+        console.log('Error saving shift:', err);
+        next(err);
+    });
 
 });
 

@@ -4,10 +4,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// Load environment variables from the .env file
+require('dotenv').config();
+
+// Import the MongoDB connection function
+var connectDB = require('./config/db');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+// Connect ShiftTrack to MongoDB Atlas
+connectDB();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
