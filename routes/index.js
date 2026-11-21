@@ -49,7 +49,20 @@ newShift.save()
 
 /* GET shift history page. */
 router.get('/shift-history', function(req, res, next) {
-  res.render('shift-history', { title: 'Shift History' });
+
+  // Retrieves all saved shifts from MongoDB
+  Shift.find({})
+    .then(function(shifts) {
+
+      // Passes the saved shifts to the shift history page
+      res.render('shift-history', {
+        title: 'Shift History',
+        shifts: shifts
+      });
+    })
+    .catch(function(err) {
+      next(err);
+    });
 });
 
 module.exports = router;

@@ -22,8 +22,9 @@
             <a href="/">Home</a>
             <!-- Link to homepage -->
 
-            <a href="/shifts">Shift History</a>
-            <!-- Link to view previous shifts -->
+            <!-- Link to the shift history page -->
+            <a href="/shift-history">Shift History</a>
+            
 
             <a href="/add-shift">Add Shift</a>
             <!-- Link to add shift page -->
@@ -33,43 +34,38 @@
     </div>
 
     <!-- Main section for shift history -->
-    <div class="shift-history">
+<div class="shift-history">
 
-        <!-- Displays the page heading -->
-        <h1>Shift History</h1>
+    <!-- Displays the page heading -->
+    <h1>Shift History</h1>
 
-        <!-- Displays the shift information headings -->
+    <!-- Loops through all saved shifts -->
+    <% for(let count=0;count<shifts.length;count++) { %>
+
+        <!-- Displays the saved shift information -->
         <div class="shift-details">
             <h3>Shift Date</h3>
-            <p>No shifts recorded yet.</p>
+            <p><%= shifts[count].shiftDate %></p>
         </div>
 
         <div class="shift-details">
             <h3>Start Time</h3>
-            <p>No information available.</p>
+            <p><%= shifts[count].startTime %></p>
         </div>
 
         <div class="shift-details">
             <h3>End Time</h3>
-            <p>No information available.</p>
-        </div>
-
-        <div class="shift-details">
-            <h3>Hours Worked</h3>
-            <p>No information available.</p>
+            <p><%= shifts[count].endTime %></p>
         </div>
 
         <div class="shift-details">
             <h3>Hourly Wage</h3>
-            <p>No information available.</p>
+            <p>$<%= shifts[count].hourlyWage %></p>
         </div>
 
-        <div class="shift-details">
-            <h3>Estimated Earnings</h3>
-            <p>No information available.</p>
-        </div>
+    <%} %>
 
-    </div>
+</div>
 </body>
 
 <!-- Displays the website footer -->
