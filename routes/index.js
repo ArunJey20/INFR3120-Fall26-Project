@@ -29,5 +29,9 @@ router.post('/add-shift', function(req, res, next) {
 
 });
 
+/* GET shift history page. */
+router.get('/shift-history', function(req, res, next) {
+  res.render('shift-history', { title: 'Shift History' });
+});
 
 module.exports = router;

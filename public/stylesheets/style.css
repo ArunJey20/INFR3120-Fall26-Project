@@ -81,7 +81,7 @@ footer {
     padding: 20px;
     color: #293241;
     border-top: 1px solid #c5ddf5;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
@@ -109,4 +109,30 @@ body {
 .Nav-Bar header h2 {
     float: left;
     margin-top: 22px;
+}
+
+/* adds spacing around the shift history page */
+.shift-history {
+    padding: 40px;
+}
+
+/* styles the shift history heading */
+.shift-history h1 {
+    color: #4a90e2;
+    margin-bottom: 30px;
+}
+
+/* styles each shift information section */
+.shift-details {
+    background-color: white;
+    border: 1px solid #c5ddf5;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* styles the headings for shift information */
+.shift-details h3 {
+    color: #293241;
+    margin-bottom: 10px;
 }
